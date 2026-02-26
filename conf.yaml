@@ -1,0 +1,70 @@
+scenes:
+  indoor_1: #TBD
+    brand: iphone_16_pro
+    scene: indoor
+    image_size: [1920, 1440]   # [width, height] MUST match what you calibrate/use
+    model: pinhole
+    K:
+      - [4147.767573737247, 0.0, 2949.03754]
+      - [0.0, 4153.105597660444, 2061.75618]
+      - [0.0, 0.0, 1.0]
+    dist_model: opencv_k1k2p1p2k3
+    dist: [0.120230379, -1.21540970, 0.00323538985, -0.00549112450, 3.99169025]
+    platform: crazyfile
+    size: 0.14
+  
+  indoor_2: #TBD
+    brand: iphone_17_pro_max
+    scene: indoor
+    image_size: [1920, 1440]   # [width, height] MUST match what you calibrate/use
+    model: pinhole
+    K:
+      - [4147.767573737247, 0.0, 2949.03754]
+      - [0.0, 4153.105597660444, 2061.75618]
+      - [0.0, 0.0, 1.0]
+    dist_model: opencv_k1k2p1p2k3
+    dist: [0.120230379, -1.21540970, 0.00323538985, -0.00549112450, 3.99169025]
+    platform: crazyfile
+    size: 0.14
+
+  univ_1:
+    brand: iphone_17_pro_max
+    scene: univ_1
+    image_size: [1920, 1440]
+    model: pinhole
+    K:
+      - [2730.557600362729, 0.0, 1088.92611]
+      - [0.0, 2727.7242142100436, 1915.49772]
+      - [0.0, 0.0, 1.0]
+    dist_model: opencv_k1k2p1p2k3
+    dist: [0.156413334, 0.214240109, 0.00151056784, 0.00170725329, -4.13980431]
+    platform: holybro
+    size: 0.5
+  
+  univ_2: #TBD
+    brand: iphone_17_pro_max
+    scene: univ_2
+    image_size: [1920, 1440]
+    model: pinhole
+    K:
+      - [2730.557600362729, 0.0, 1088.92611]
+      - [0.0, 2727.7242142100436, 1915.49772]
+      - [0.0, 0.0, 1.0]
+    dist_model: opencv_k1k2p1p2k3
+    dist: [0.156413334, 0.214240109, 0.00151056784, 0.00170725329, -4.13980431]
+    platform: holybro
+    size: 0.5
+
+  farm: #TBD
+    brand: iphone_17_pro
+    scene: farm
+    image_size: [1920, 1440]
+    model: pinhole
+    K:
+      - [2730.557600362729, 0.0, 1088.92611]
+      - [0.0, 2727.7242142100436, 1915.49772]
+      - [0.0, 0.0, 1.0]
+    dist_model: opencv_k1k2p1p2k3
+    dist: [0.156413334, 0.214240109, 0.00151056784, 0.00170725329, -4.13980431]
+    platform: holybro
+    size: 0.5

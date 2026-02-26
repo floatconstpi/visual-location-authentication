@@ -1,0 +1,44 @@
+from torch.utils.data import Dataset, DataLoader
+import pandas as pd
+import os
+from glob import glob
+import cv2
+from pdb import set_trace as st
+import numpy as np
+from pycocotools.coco import COCO
+import yaml
+import numpy as np
+
+
+def pinhole_distance_estimate(bb, scene=None):
+    cam = cfg["scenes"][scene]
+
+    K = np.array(cam["K"], dtype=np.float64)
+    dist = np.array(cam["dist"], dtype=np.float64).reshape(-1, 1)
+    actual_size = np.array(cam["size"], dtype=np.float64)
+
+
+    fx = K[0, 0]
+
+    # w_undistorted = undistorted_bbox_width(bb,K,dist)
+    return float((fx * actual_size) / bb[2])
+
+
+def undistorted_bbox_width(bb_xywh,K,dist):
+    
+    x, y, w, h = bb_xywh
+
+    pts = np.array([
+        [x,     y],
+        [x + w, y],
+        [x,     y + h],
+        [x + w, y + h]
+    ], dtype=np.float64).reshape(-1, 1, 2)
+
+    pts_u = cv2.undistortPoints(pts, K, dist, P=K)  # shape (4,1,2)
+    pts_u = pts_u.reshape(-1, 2)
+
+    u_min, v_min = pts_u.min(axis=0)
+    u_max, v_max = pts_u.max(axis=0)
+
+    return float(u_max - u_min)

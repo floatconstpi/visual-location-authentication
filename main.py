@@ -114,3 +114,21 @@ def distance_spoof_exp(dataset,taus=None,show_ROC=True,seed=None,data_name=None,
     
 
     return taus, tpr, fpr, np.array(all_eps_mag)
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(prog="Location Authentication Experimentation")
+    parser.add_argument("--exp", help="This argument decides which experiment to run", choices=("range","spoof","det"))
+    parser.add_argument("--data", help="Dataset to test", choices=("univ_1","univ_2","indoor_1","indoor_2","farm"))
+    parser.add_argument("--eps_mags", nargs='+',help="space-separated eps magnitudes to test with",type=float,default=[2,5,10])
+    parser.add_argument("--exp_name", help="additional experiment identifier",type=str,default="trial")
+    parser.add_argument("--seed", help="random seed", type=int)
+    parser.add_argument("--predicted", help="to use predicted bbox vs GT", action='store_true')
+    args = parser.parse_args()
+
+    dataset = DroneDataset("../drones_datasets/DroneR",args.data,predicted=args.predicted)
+
+
+    if args.exp == "range":
+        pinhole_range_est_exp(dataset,predicted=args.predicted)
+    elif args.exp == "spoof":
+        distance_spoof_exp(dataset,seed=args.seed,data_name=args.data, eps_mags=args.eps_mags, exp_name=args.exp_name)

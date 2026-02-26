@@ -104,3 +104,22 @@ def make_rid_injection(Zgt, eps_mags=None,seed=None):
 
     Zrid_attacked = Zgt + eps
     return Zrid_attacked, eps, eps_mag
+
+def select_tau_low_fpr(taus, tpr, fpr, fpr_target=0.01):
+    ok = np.where(fpr <= fpr_target)[0]
+    if len(ok) == 0:
+        return None
+    i = ok[0]  # smallest tau meeting constraint
+    return taus[i], tpr[i], fpr[i]
+
+def select_tau_youden(taus, tpr, fpr):
+    j = tpr - fpr
+    i = int(np.argmax(j))
+    return taus[i], tpr[i], fpr[i], j[i]
+
+def decision_making(dist_auth, dist_spoof, z_vis, taus):
+    # returns booleans: flag_auth contributes to FPR; flag_spoof contributes to TPR
+    flag_auth  = np.abs(z_vis - dist_auth)  > taus   # y=0, want mostly False
+    flag_spoof = np.abs(z_vis - dist_spoof) > taus   # y=1, want mostly True
+    return flag_auth, flag_spoof
+        

@@ -84,3 +84,23 @@ class DroneDataset(Dataset):
         distance = self.metadata.loc[self.metadata["Photo"]==img_name]["Distance"].item()
         scene = self.metadata.loc[self.metadata["Photo"]==img_name]["scene"].item()
         return image, distance, ann[0], self.coco_ann, scene, img_name
+
+
+def make_rid_injection(Zgt, eps_mags=None,seed=None):
+    """
+    Zgt: (N,) ground-truth distance in meters
+    Returns:
+      Zrid_attacked: (N,) = Zgt + eps
+      eps: (N,) signed injected error (meters)
+      eps_mag: (N,) absolute injected magnitude (meters)
+    """
+    Zgt = np.asarray(Zgt, dtype=float)
+    rng = np.random.default_rng(seed)
+    sign = rng.choice([-1.0, 1.0])
+    # eps_mag = rng.choice(np.array(tuple(eps_mags), dtype=float))   
+    eps_mag = rng.random() * (eps_mags[1] - eps_mags[0]) + eps_mags[0] 
+    eps = sign * eps_mag
+    
+
+    Zrid_attacked = Zgt + eps
+    return Zrid_attacked, eps, eps_mag

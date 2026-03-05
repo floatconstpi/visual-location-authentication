@@ -3,7 +3,7 @@ UTM - Visual Authentication of Drone Location
 
 ***Overview:** Our tool represents a visual authentication layer of drone-broadcasted RID. The tool addresses a serious problem in current drone RID broadcasting, where the authentication is not currently enforced under existing standards, making the broadcast RID easily spoofable. We confirm the received RID visually by comparing it to the perceived distance/location.
 <div style="width: 100%; text-align: center;">
-    <img src="arch.gif" width="600px" />
+    <img src="Fig1-animated.gif" width="600px" />
 </div>
 
 [Installation](#installation) • [Dataset](#Dataset) • [Drone Detection](#drone-detection) • [Pinhole Range Estimation](#pinhole-range-estimation) • [Spoofing Detection](#spoofing-detection) • [Checkpoints](#checkpoints) •  [Cite](#reference)

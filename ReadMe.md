@@ -52,7 +52,7 @@ python main.py --exp spoof --data univ_1 --eps_mags 20 50 --seed 999 --exp_name 
 - Saves `seed_{seed}_{eps_min}_{eps_max}/` with `Fig_{data}.png`, `distances_{data}.csv`, `results.csv`. 
 - Prints AUC, thresholds (low-FPR and Youden's J), TPR/FPR. Available datasets: `univ_1`, `univ_2`, `indoor_1`, `indoor_2`, `farm`.
 ## Checkpoints
-For reproducibility, all trained models used can be accessed [here](https://drive.google.com/drive/folders/1yW1mPhAYypg2-ZwWmRU1LetyW2wfFE8M?usp=sharing).
+For reproducibility, all trained models used can be accessed [here](www.google.com).
 
 ## Issues
 - Please report all issues on the public forum.

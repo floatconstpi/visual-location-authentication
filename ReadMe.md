@@ -20,7 +20,7 @@ To use the same dataset DroneR featured in our paper, use the following link:
 [Dataset Link](www.google.com)
 The downloaded files will include a COCO format dataset, consisting of images, with manual bounding box annotations. Moreover, we supply the GT distances measured manually in Distances.csv along with other useful metadata.
 
-Furthermore, we supply the precomputed bounding box predictions made by our [model](#Drone Detection)
+Furthermore, we supply the precomputed bounding box predictions made by our [model](#drone-detection)
 
 ## Drone Detection 
 Run YOLO inference on your dataset to generate bounding box predictions in CSV format, compatible with the `--predicted` flag in main.py.

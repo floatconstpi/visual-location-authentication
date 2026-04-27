@@ -1,12 +1,12 @@
-[!NOTE]
-Please note this codebase's paper was accepted at ICUAS 2026. Citations for the paper will come soon.
+> [!NOTE]
+> Please note this codebase's paper was accepted at ICUAS 2026. Citations for the paper will come soon.
 
 
 
 UTM - Visual Authentication of Drone Location  
 ===========
 
-***Overview:** Our tool represents a visual authentication layer of drone-broadcasted RID. The tool addresses a serious problem in current drone RID broadcasting, where the authentication is not currently enforced under existing standards, making the broadcast RID easily spoofable. We confirm the received RID visually by comparing it to the perceived distance/location.
+**Overview:** Our tool represents a visual authentication layer of drone-broadcasted RID. The tool addresses a serious problem in current drone RID broadcasting, where the authentication is not currently enforced under existing standards, making the broadcast RID easily spoofable. We confirm the received RID visually by comparing it to the perceived distance/location.
 <div style="width: 100%; text-align: center;">
     <img src="Fig1-animated.gif" width="600px" />
 </div>

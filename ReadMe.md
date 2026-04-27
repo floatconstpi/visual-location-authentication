@@ -64,7 +64,9 @@ For reproducibility, all trained models used can be accessed [here](www.google.c
 
 ## Reference
 - Citation for our paper accepted in ICUAS 2026 is coming soon!
-- To cite the dataset: ```@dataset{obeid_2026_19722973,
+- To cite the dataset:
+```
+@dataset{obeid_2026_19722973,
   author       = {Obeid, Ahmad and
                   Saeed, Elyas and
                   Hejji, Dina and
@@ -80,4 +82,5 @@ For reproducibility, all trained models used can be accessed [here](www.google.c
   publisher    = {Zenodo},
   doi          = {10.5281/zenodo.19722973},
   url          = {https://doi.org/10.5281/zenodo.19722973},
-}```
+}
+```

@@ -1,3 +1,8 @@
+[!NOTE]
+Please note this codebase's paper was accepted at ICUAS 2026. Citations for the paper will come soon.
+
+
+
 UTM - Visual Authentication of Drone Location  
 ===========
 
@@ -17,10 +22,10 @@ git clone https://github.com/KU-USL/visual-location-authentication.git
 
 ## Dataset
 To use the same dataset DroneR featured in our paper, use the following link:
-[Dataset Link](www.google.com)
+[Dataset Link](https://zenodo.org/records/19722973)
 The downloaded files will include a COCO format dataset, consisting of images, with manual bounding box annotations. Moreover, we supply the GT distances measured manually in Distances.csv along with other useful metadata.
 
-Furthermore, we supply the precomputed bounding box predictions made by our [model](#drone-detection)
+Furthermore, in the dataset, we also supply the precomputed bounding box predictions made by our [model](#drone-detection)
 
 ## Drone Detection 
 Run YOLO inference on your dataset to generate bounding box predictions in CSV format, compatible with the `--predicted` flag in main.py.
@@ -58,4 +63,21 @@ For reproducibility, all trained models used can be accessed [here](www.google.c
 - Please report all issues on the public forum.
 
 ## Reference
-- Coming Soon!
+- Citation for our paper accepted in ICUAS 2026 is coming soon!
+- To cite the dataset: ```@dataset{obeid_2026_19722973,
+  author       = {Obeid, Ahmad and
+                  Saeed, Elyas and
+                  Hejji, Dina and
+                  Woldegiorgish, Noah Yohannes and
+                  Ryyan, Mohammad and
+                  Atrouz, Mohammad and
+                  Shoufan, Abdulhadi},
+  title        = {DroneR Dataset for Visual Authentication of Drone
+                   Location
+                  },
+  month        = apr,
+  year         = 2026,
+  publisher    = {Zenodo},
+  doi          = {10.5281/zenodo.19722973},
+  url          = {https://doi.org/10.5281/zenodo.19722973},
+}```

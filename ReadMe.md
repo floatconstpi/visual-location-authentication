@@ -24,6 +24,7 @@ git clone https://github.com/KU-USL/visual-location-authentication.git
 To use the same dataset DroneR featured in our paper, use the following link:
 [Dataset Link](https://zenodo.org/records/19722973)
 The downloaded files will include a COCO format dataset, consisting of images, with manual bounding box annotations. Moreover, we supply the GT distances measured manually in Distances.csv along with other useful metadata.
+[(Alternate link)](https://www.kaggle.com/datasets/ahmadobeid/droner)
 
 Furthermore, in the dataset, we also supply the precomputed bounding box predictions made by our [model](#drone-detection)
 

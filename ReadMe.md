@@ -1,5 +1,5 @@
 > [!NOTE]
-> Please note this codebase's paper was accepted at ICUAS 2026. Citations for the paper will come soon.
+> Our paper was presented at ICUAS 2026! You may access it [here](https://ieeexplore.ieee.org/document/11598688), and cite it in the format provided in the [citation section](#reference)
 
 
 
@@ -57,14 +57,23 @@ python main.py --exp spoof --data univ_1 --eps_mags 20 50 --seed 999 --exp_name 
 - `--exp_name`: Optional identifier for output dir. 
 - Saves `seed_{seed}_{eps_min}_{eps_max}/` with `Fig_{data}.png`, `distances_{data}.csv`, `results.csv`. 
 - Prints AUC, thresholds (low-FPR and Youden's J), TPR/FPR. Available datasets: `univ_1`, `univ_2`, `indoor_1`, `indoor_2`, `farm`.
-## Checkpoints
-For reproducibility, all trained models used can be accessed [here](www.google.com).
+
 
 ## Issues
 - Please report all issues on the public forum.
 
 ## Reference
-- Citation for our paper accepted in ICUAS 2026 is coming soon!
+- To cite the paper: ```@INPROCEEDINGS{11598688,
+  author={Obeid, Ahmad and Saeed, Elyas and Hejji, Dina and Yohannes, Noah and Rayyan, Mohammad and Atrouz, Mohammad and Shoufan, Abdulhadi},
+  booktitle={2026 International Conference on Unmanned Aircraft Systems (ICUAS)}, 
+  title={Visual Verification of UAV Location in Remote Identification Messages}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={553-560},
+  keywords={Distance measurement;Autonomous aerial vehicles;Modeling;Cameras;Signal detection;Observers;Drones;Grounding;Broadcasting;Printing;Secure UTM;Unmanned Traffic Management;visual location authentication},
+  doi={10.1109/ICUAS69441.2026.11598688}}```
+
 - To cite the dataset:
 ```
 @dataset{obeid_2026_19722973,

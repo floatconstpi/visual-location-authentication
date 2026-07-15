@@ -1,5 +1,5 @@
 > [!NOTE]
-> Our paper was presented at ICUAS 2026! You may access it [here](https://ieeexplore.ieee.org/document/11598688), and cite it in the format provided in the [citation section](#reference)
+> Our paper was presented at ICUAS 2026! You may access it [here](https://ieeexplore.ieee.org/document/11598688), and cite it in the format provided in the [citation section](#reference).
 
 
 
@@ -63,7 +63,9 @@ python main.py --exp spoof --data univ_1 --eps_mags 20 50 --seed 999 --exp_name 
 - Please report all issues on the public forum.
 
 ## Reference
-- To cite the paper: ```@INPROCEEDINGS{11598688,
+- To cite the paper:
+```
+  @INPROCEEDINGS{11598688,
   author={Obeid, Ahmad and Saeed, Elyas and Hejji, Dina and Yohannes, Noah and Rayyan, Mohammad and Atrouz, Mohammad and Shoufan, Abdulhadi},
   booktitle={2026 International Conference on Unmanned Aircraft Systems (ICUAS)}, 
   title={Visual Verification of UAV Location in Remote Identification Messages}, 
@@ -72,7 +74,8 @@ python main.py --exp spoof --data univ_1 --eps_mags 20 50 --seed 999 --exp_name 
   number={},
   pages={553-560},
   keywords={Distance measurement;Autonomous aerial vehicles;Modeling;Cameras;Signal detection;Observers;Drones;Grounding;Broadcasting;Printing;Secure UTM;Unmanned Traffic Management;visual location authentication},
-  doi={10.1109/ICUAS69441.2026.11598688}}```
+  doi={10.1109/ICUAS69441.2026.11598688}}
+  ```
 
 - To cite the dataset:
 ```
